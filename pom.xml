@@ -12,8 +12,27 @@
         <module>error-prone1</module>
         <module>aspectj</module>
         <module>plexus-eclipse</module>
+        <module>forked_javac</module>
+        <module>plain-javac</module>
 
     </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
 
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <forceJavacCompilerUse>true</forceJavacCompilerUse>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
