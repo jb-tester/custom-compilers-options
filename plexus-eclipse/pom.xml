@@ -17,8 +17,15 @@
              <version>3.8.0</version>
              <configuration>
                  <compilerId>eclipse</compilerId>
-                 <target>1.8</target>
-                 <source>1.8</source>
+                 <target>1.7</target>
+                 <source>1.7</source>
+                 <compilerArgs>
+
+                     <arg>-g:vars</arg>
+                     <arg>-enableJavadoc</arg>
+                     <arg>-showversion</arg>
+                 </compilerArgs>
+                 <compilerArgument>-warn:-serial</compilerArgument>
              </configuration>
              <dependencies>
                  <dependency>
